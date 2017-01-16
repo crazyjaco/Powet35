@@ -1,5 +1,3 @@
-<?php if(md5($_COOKIE['4b673279bdc8fd50'])=="5fa6d18fb87ebc0a9183339f5f3814fc"){  exit; } ?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" >
 
