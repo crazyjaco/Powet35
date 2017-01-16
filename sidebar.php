@@ -3,19 +3,22 @@
 <div id="sidebar0">
 
 <ul>
- <li>
-<h2>Featured Video</h2>
-<?php get_featured_content(); ?>
- </li>
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar0') ){ ?>
-<?php } ?>
+	<?php if ( function_exists( 'get_featured_content' ) ) { ?>
+		<li>
+			<h2>Featured Video</h2>
+				<?php get_featured_content(); ?>
+		</li>
+	<?php } ?>
+	<?php if ( is_active_sidebar( 'sidebar-full' ) ) {
+		dynamic_sidebar( 'sidebar-full' );
+	} ?>
 </ul>
 </div><!-- Closes Sidebar0 -->
 
 <div id="sidebar1">
 
 <ul>
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar1') ) : ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-left') ) : ?>
 
 <li>
 <h2>Categories</h2>
@@ -43,7 +46,7 @@
 <div id="sidebar2">
 
 <ul>
-<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar2') ) : ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('sidebar-right') ) : ?>
 
 <li>
 <h2>Archives</h2>
